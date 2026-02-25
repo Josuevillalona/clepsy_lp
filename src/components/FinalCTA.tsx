@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useWaitlist } from "@/components/WaitlistModal";
 
 export function FinalCTA() {
-  const { open } = useWaitlist();
+  const { open, count } = useWaitlist();
 
   return (
     <section className="relative py-24">
@@ -15,10 +15,11 @@ export function FinalCTA() {
 
           <div className="relative">
             <h2 className="font-display text-4xl font-bold text-cream md:text-5xl">
-              Be the first to take back your time
+              For people who are tired of saying &ldquo;I&apos;ll stop tomorrow.&rdquo;
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-cream-muted">
-              Join the waitlist and get early access when Clepsy launches.
+              You already have the time. Join {count !== null ? `${count.toLocaleString()}` : "1,200+"} people who are ready to
+              stop saying &ldquo;tomorrow&rdquo; and start redirecting it.
             </p>
 
             <Button
@@ -27,10 +28,6 @@ export function FinalCTA() {
             >
               Join Waitlist
             </Button>
-
-            <p className="mt-6 text-sm text-cream-muted/60">
-              Join 1,200+ others on the waitlist
-            </p>
           </div>
         </div>
       </div>

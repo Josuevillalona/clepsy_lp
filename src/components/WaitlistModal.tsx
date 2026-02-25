@@ -4,8 +4,17 @@ import { createContext, useContext, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useWaitlistCount } from "@/hooks/useWaitlistCount";
 
-const WaitlistContext = createContext<{ open: () => void }>({ open: () => {} });
+interface WaitlistContextValue {
+  open: () => void;
+  count: number | null;
+}
+
+const WaitlistContext = createContext<WaitlistContextValue>({
+  open: () => {},
+  count: null,
+});
 
 export function useWaitlist() {
   return useContext(WaitlistContext);
@@ -15,14 +24,42 @@ export function WaitlistProvider({ children }: { children: React.ReactNode }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const { count, refetch } = useWaitlistCount();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) setSubmitted(true);
+    if (!email) return;
+
+    setSubmitting(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || "Something went wrong");
+        return;
+      }
+
+      setSubmitted(true);
+      refetch();
+    } catch {
+      setError("Network error. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
-    <WaitlistContext.Provider value={{ open: () => setModalOpen(true) }}>
+    <WaitlistContext.Provider value={{ open: () => setModalOpen(true), count }}>
       {children}
 
       {modalOpen && (
@@ -58,13 +95,18 @@ export function WaitlistProvider({ children }: { children: React.ReactNode }) {
                   placeholder="Your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  disabled={submitting}
                   className="rounded-full border-gold/20 bg-white/5 px-5 py-3 text-cream placeholder:text-cream-muted/50 focus:border-gold"
                 />
+                {error && (
+                  <p className="text-sm text-red-400 text-center">{error}</p>
+                )}
                 <Button
                   type="submit"
-                  className="rounded-full bg-gold px-8 py-3 font-semibold text-midnight hover:bg-gold/90 transition-all duration-300 hover:shadow-[0_0_24px_rgba(244,162,89,0.4)]"
+                  disabled={submitting}
+                  className="rounded-full bg-gold px-8 py-3 font-semibold text-midnight hover:bg-gold/90 transition-all duration-300 hover:shadow-[0_0_24px_rgba(244,162,89,0.4)] disabled:opacity-50"
                 >
-                  Join Waitlist
+                  {submitting ? "Joining..." : "Join Waitlist"}
                 </Button>
               </form>
             ) : (

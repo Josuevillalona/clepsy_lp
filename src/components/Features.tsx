@@ -1,38 +1,38 @@
 const features = [
   {
-    title: "iOS-Enforced Blocking",
+    title: "Can't Be Cheated",
     description:
-      "Real restrictions you can't bypass with a tap. Powered by Apple's Screen Time API.",
+      "Powered by the same API iOS uses. No \"Ignore for today\" button. No workaround. That's the whole point.",
     icon: "🔒",
   },
   {
-    title: "Smart Time Tracking",
+    title: "Tracks Automatically",
     description:
-      "Automatic background monitoring. No manual timers — Clepsy knows when you're being productive.",
+      "Open Kindle at lunch, close it 15 minutes later. 15 minutes of TikTok just appeared in your balance. No buttons, no manual timers.",
     icon: "🧠",
   },
   {
-    title: "Daily Fresh Start",
+    title: "Clean Slate Every Morning",
     description:
-      "Every midnight, your slate resets. New day, new opportunity to earn your screen time.",
+      "At midnight, your balance resets to zero. Every morning is a fresh start. What will you build today?",
     icon: "🌅",
   },
   {
-    title: "Streaks & Milestones",
+    title: "Streaks That Mean Something",
     description:
-      "Positive reinforcement through streaks, badges, and celebrations. Not shame — motivation.",
+      "Your Kindle streak is longer than most people's gym streak. Clepsy throws confetti — you earned it.",
     icon: "🏆",
   },
   {
-    title: "Your Accountability Buddy",
+    title: "A Buddy, Not a Cop",
     description:
-      "Meet Clepsy — a friendly mascot that reacts to your progress with patience, encouragement, and celebration.",
+      "Clepsy waits patiently, cheers you on, and celebrates your wins. No shame, no lectures — just someone in your corner.",
     icon: "🤝",
   },
   {
-    title: "Privacy First",
+    title: "Your Data Stays Yours",
     description:
-      "All data stays on your device. No cloud tracking, no selling your habits. Just you and your goals.",
+      "Everything lives on your device. No cloud tracking, no selling your habits. Your hours are your business.",
     icon: "🛡️",
   },
 ];
@@ -46,11 +46,11 @@ export function Features() {
             Features
           </p>
           <h2 className="mt-4 font-display text-4xl font-bold text-cream md:text-5xl">
-            Built for real change
+            20 min of reading. 20 min of Instagram.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-cream-muted">
-            Not another screen time reminder you&apos;ll ignore. Clepsy creates
-            real boundaries with real rewards.
+            Not another screen time reminder you&apos;ll ignore. A system you
+            can&apos;t cheat — and won&apos;t want to.
           </p>
         </div>
 

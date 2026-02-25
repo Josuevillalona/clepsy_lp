@@ -10,6 +10,11 @@
       "source": "wondelai/skills",
       "sourceType": "github",
       "computedHash": "6b717a78dae66c2a1c607a23e1d80f0fdc49f0a77fbf74c4e045646239f79487"
+    },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "computedHash": "e688fcd4c5693e14ebd00d48e982dbd2be060fbea89f5f60531e79c704a1bc28"
     }
   }
 }

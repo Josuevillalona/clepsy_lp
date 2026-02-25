@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Clepsy — Take Back Your Time",
   description:
-    "Clepsy blocks social media until you earn screen time through productive apps. No more doomscrolling on autopilot. Coming soon to iOS.",
+    "What if every hour on TikTok became an hour of Duolingo? Clepsy trades your scroll time for time that builds something real. Coming soon to iOS.",
   keywords: [
     "screen time",
     "doomscrolling",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Clepsy — Take Back Your Time",
     description:
-      "Block social media. Earn screen time through productive apps. No more doomscrolling.",
+      "Trade your scroll time for time that builds something real. 52 books. A new language. You already have the hours.",
     type: "website",
     locale: "en_US",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clepsy — Take Back Your Time",
     description:
-      "Block social media. Earn screen time through productive apps. No more doomscrolling.",
+      "Trade your scroll time for time that builds something real. 52 books. A new language. You already have the hours.",
   },
 };
 

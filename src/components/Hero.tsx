@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useWaitlist } from "@/components/WaitlistModal";
 
 export function Hero() {
-  const { open } = useWaitlist();
+  const { open, count } = useWaitlist();
 
   return (
     <section
@@ -48,7 +49,9 @@ export function Hero() {
               className="mt-6 text-lg leading-relaxed text-cream-muted animate-fade-up opacity-0"
               style={{ animationDelay: "0.3s" }}
             >
-              Clepsy blocks social media until you earn screen time through productive apps. No more doomscrolling on autopilot.
+              What if every hour you didn&apos;t spend on TikTok became an hour
+              of Duolingo? Clepsy trades your scroll time for time that builds
+              something real.
             </p>
 
             <div
@@ -59,25 +62,27 @@ export function Hero() {
                 onClick={open}
                 className="rounded-full bg-gold px-10 py-6 text-lg font-semibold text-midnight hover:bg-gold/90 hover:shadow-[0_0_24px_rgba(244,162,89,0.4)] transition-all duration-300"
               >
-                Download App
+                Join Waitlist
               </Button>
             </div>
 
-            {/* Stats */}
+            {/* Social proof */}
             <div
-              className="mt-10 flex gap-8 border-t border-gold/10 pt-8 w-full animate-fade-up opacity-0"
+              className="mt-8 flex items-center gap-3 animate-fade-up opacity-0"
               style={{ animationDelay: "0.7s" }}
             >
-              <div>
-                <p className="font-display text-2xl font-bold text-gold">64%</p>
-                <p className="mt-0.5 text-sm text-cream-muted">of Americans<br />doomscroll daily</p>
-              </div>
-              <div className="w-px bg-gold/15" />
-              <div>
-                <p className="font-display text-2xl font-bold text-gold">3.5 hrs</p>
-                <p className="mt-0.5 text-sm text-cream-muted">lost per week to<br />mindless scrolling</p>
-              </div>
+              <Users className="h-5 w-5 text-gold" />
+              <p className="text-sm text-cream-muted">
+                <span className="font-semibold text-cream">{count !== null ? count.toLocaleString() : "1,200+"}</span> people on the waitlist
+              </p>
             </div>
+
+            <p
+              className="mt-4 text-sm text-cream-muted/70 animate-fade-up opacity-0"
+              style={{ animationDelay: "0.9s" }}
+            >
+              Because we couldn&apos;t stop scrolling either.
+            </p>
           </div>
 
         </div>

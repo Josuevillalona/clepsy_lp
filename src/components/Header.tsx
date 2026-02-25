@@ -52,7 +52,7 @@ export function Header() {
           onClick={open}
           className="rounded-full bg-gold px-6 font-semibold text-midnight hover:bg-gold/90"
         >
-          Download App
+          Join Waitlist
         </Button>
       </div>
     </header>
