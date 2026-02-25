@@ -37,9 +37,9 @@ export function Hero() {
           </div>
 
           {/* Right: Content */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h1
-              className="font-display text-6xl font-bold leading-[1.05] tracking-tight text-cream md:text-7xl animate-fade-up"
+              className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-cream sm:text-5xl md:text-7xl animate-fade-up"
               style={{ animationDelay: "0.1s" }}
             >
               Take back<br />your{" "}
@@ -47,7 +47,7 @@ export function Hero() {
             </h1>
 
             <p
-              className="mt-6 text-lg leading-relaxed text-cream-muted animate-fade-up opacity-0"
+              className="mt-6 text-base sm:text-lg leading-relaxed text-cream-muted animate-fade-up opacity-0"
               style={{ animationDelay: "0.3s" }}
             >
               What if every hour you didn&apos;t spend on TikTok became an hour

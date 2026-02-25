@@ -47,8 +47,8 @@ export function Features() {
           <p className="text-sm font-semibold uppercase tracking-widest text-gold">
             Features
           </p>
-          <h2 className="mt-4 font-display text-4xl font-bold text-cream md:text-5xl">
-            Built for people with zero willpower<br />and <span className="text-gold">big plans.</span>
+          <h2 className="mt-4 font-display text-3xl font-bold text-cream sm:text-4xl md:text-5xl">
+            Built for people with zero willpower and <span className="text-gold">big plans.</span>
           </h2>
         </div>
 

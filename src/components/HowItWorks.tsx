@@ -35,12 +35,12 @@ export function HowItWorks() {
         <div className="grid items-start gap-12 md:grid-cols-2 lg:gap-20">
 
           {/* Left: Content */}
-          <div className="px-4 md:px-0">
+          <div>
             <div className="reveal">
               <p className="text-sm font-semibold uppercase tracking-widest text-gold text-center md:text-left">
                 How It Works
               </p>
-              <h2 className="mt-4 text-center md:text-left font-display text-4xl font-bold md:text-5xl">
+              <h2 className="mt-4 text-center md:text-left font-display text-3xl font-bold sm:text-4xl md:text-5xl">
                 <span className="text-cream">Block.</span> <span className="text-cream">Redirect.</span> <span className="text-gold">Repeat.</span>
               </h2>
             </div>

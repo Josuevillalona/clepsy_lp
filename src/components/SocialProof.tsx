@@ -27,7 +27,7 @@ export function SocialProof() {
           <p className="text-sm font-semibold uppercase tracking-widest text-gold">
             Your Time, Compounded
           </p>
-          <h2 className="mt-4 font-display text-4xl font-bold text-cream md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl font-bold text-cream sm:text-4xl md:text-5xl">
             Same hours. Different outcome.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-cream-muted">

@@ -48,7 +48,7 @@ export function FAQ() {
           <p className="text-sm font-semibold uppercase tracking-widest text-gold">
             FAQ
           </p>
-          <h2 className="mt-4 font-display text-4xl font-bold text-cream md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl font-bold text-cream sm:text-4xl md:text-5xl">
             Questions & answers
           </h2>
         </div>

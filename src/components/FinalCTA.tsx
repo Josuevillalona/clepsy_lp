@@ -10,12 +10,12 @@ export function FinalCTA() {
   return (
     <section className="relative py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="reveal relative overflow-hidden rounded-3xl bg-gradient-to-br from-gold/20 via-gold/10 to-brown/10 p-12 text-center md:p-14">
+        <div className="reveal relative overflow-hidden rounded-3xl bg-gradient-to-br from-gold/20 via-gold/10 to-brown/10 p-8 text-center sm:p-12 md:p-14">
           {/* Background glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-gold/10 blur-[100px] pointer-events-none" />
 
           <div className="relative">
-            <h2 className="font-display text-5xl font-bold text-cream md:text-6xl">
+            <h2 className="font-display text-3xl font-bold text-cream sm:text-4xl md:text-6xl">
               You already know.
             </h2>
             <p className="mt-4 text-lg text-cream-muted">
