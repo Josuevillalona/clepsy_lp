@@ -79,7 +79,7 @@ export function HowItWorks() {
           </div>
 
           {/* Right: Phone mockup */}
-          <div className="flex items-center justify-center reveal mt-15">
+          <div className="hidden md:flex items-center justify-center reveal mt-15">
             <Image
               src="/app_block_mock.png"
               alt="Clepsy blocking Instagram — showing earned time balance"

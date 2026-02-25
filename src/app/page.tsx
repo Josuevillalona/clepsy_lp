@@ -10,22 +10,25 @@ import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { WaitlistProvider } from "@/components/WaitlistModal";
+import { ContactProvider } from "@/components/ContactModal";
 
 export default function Home() {
   useScrollReveal();
 
   return (
     <WaitlistProvider>
-      <Header />
-      <main>
-        <Hero />
-        <Problem />
-        <HowItWorks />
-        <Features />
-        <FAQ />
-        <FinalCTA />
-      </main>
-      <Footer />
+      <ContactProvider>
+        <Header />
+        <main>
+          <Hero />
+          <Problem />
+          <HowItWorks />
+          <Features />
+          <FAQ />
+          <FinalCTA />
+        </main>
+        <Footer />
+      </ContactProvider>
     </WaitlistProvider>
   );
 }

@@ -21,7 +21,7 @@ export function Hero() {
         <div className="grid items-center gap-8 md:grid-cols-2">
 
           {/* Left: Phone mockup */}
-          <div className="hidden md:flex items-end justify-center relative animate-fade-in">
+          <div className="flex md:flex items-end justify-center relative animate-fade-in">
             <Image
               src="/onboarding_mock1.png"
               alt="Clepsy onboarding screen"

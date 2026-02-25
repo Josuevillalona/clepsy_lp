@@ -1,6 +1,10 @@
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import { useContact } from "@/components/ContactModal";
+
 export function Footer() {
+  const { open: openContact } = useContact();
+
   return (
     <footer className="border-t border-gold/10 py-12">
       <div className="mx-auto max-w-6xl px-6">
@@ -23,12 +27,15 @@ export function Footer() {
               >
                 Terms
               </Link>
-              <a
-                href="#"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  openContact();
+                }}
                 className="text-sm text-cream-muted transition-colors hover:text-gold"
               >
                 Contact
-              </a>
+              </button>
             </nav>
           </div>
         </div>
