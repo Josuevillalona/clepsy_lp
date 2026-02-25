@@ -50,7 +50,7 @@ export function Header() {
 
         <Button
           onClick={open}
-          className="rounded-full bg-gold px-6 font-semibold text-midnight hover:bg-gold/90"
+          className="rounded-full bg-gold px-4 text-sm font-semibold text-midnight hover:bg-gold/90 sm:px-6 sm:text-base"
         >
           Join Waitlist
         </Button>

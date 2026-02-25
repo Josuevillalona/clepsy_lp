@@ -16,6 +16,11 @@
       "sourceType": "github",
       "computedHash": "6b717a78dae66c2a1c607a23e1d80f0fdc49f0a77fbf74c4e045646239f79487"
     },
+    "mobile-design": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "computedHash": "27e338f7267fed0ce198852af954f79ce6746b9c94e4e530e581e19e568b8ba0"
+    },
     "ui-ux-pro-max": {
       "source": "nextlevelbuilder/ui-ux-pro-max-skill",
       "sourceType": "github",

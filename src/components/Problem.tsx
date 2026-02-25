@@ -89,7 +89,7 @@ export function Problem() {
         <div className="sticky top-0 flex min-h-screen flex-col items-center justify-center px-6 py-24">
 
           {/* Scroll-highlight headline */}
-          <h2 className="text-center font-display text-5xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+          <h2 className="text-center font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             {words.map((word, i) => (
               <Fragment key={i}>
                 <span
@@ -142,7 +142,7 @@ export function Problem() {
                   className="mt-12 text-center"
                 >
                   {/* The gut punch */}
-                  <p className="font-display text-7xl font-bold text-gold md:text-8xl">
+                  <p className="font-display text-5xl font-bold text-gold sm:text-7xl md:text-8xl">
                     <CountUp end={stats.weeks} suffix="" start={true} decimals={1} /> weeks
                   </p>
                   <p className="mt-3 text-xl text-cream-muted">

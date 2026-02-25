@@ -37,7 +37,7 @@ export function Hero() {
           </div>
 
           {/* Right: Content */}
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-start">
             <h1
               className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-cream sm:text-5xl md:text-7xl animate-fade-up"
               style={{ animationDelay: "0.1s" }}
