@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { useWaitlist } from "@/components/WaitlistModal";
 
 export function Hero() {
@@ -67,15 +68,17 @@ export function Hero() {
             </div>
 
             {/* Social proof */}
-            <div
-              className="mt-8 flex items-center gap-3 animate-fade-up opacity-0"
-              style={{ animationDelay: "0.7s" }}
-            >
-              <Users className="h-5 w-5 text-gold" />
-              <p className="text-sm text-cream-muted">
-                <span className="font-semibold text-cream">{count !== null ? count.toLocaleString() : "1,200+"}</span> people on the waitlist
-              </p>
-            </div>
+            {count !== null && (
+              <div
+                className="mt-8 flex items-center gap-3 animate-fade-up opacity-0"
+                style={{ animationDelay: "0.7s" }}
+              >
+                <Users className="h-5 w-5 text-gold" />
+                <p className="text-sm text-cream-muted">
+                  <AnimatedCounter value={count} className="font-semibold text-cream" /> people on the waitlist
+                </p>
+              </div>
+            )}
 
             <p
               className="mt-4 text-sm text-cream-muted/70 animate-fade-up opacity-0"

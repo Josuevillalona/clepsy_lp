@@ -50,7 +50,12 @@ export function WaitlistProvider({ children }: { children: React.ReactNode }) {
       }
 
       setSubmitted(true);
-      refetch();
+      // Show success for 1.5s, close modal, then refetch so
+      // the counter animates from old → new in plain view
+      setTimeout(() => {
+        setModalOpen(false);
+        setTimeout(() => refetch(), 300);
+      }, 1500);
     } catch {
       setError("Network error. Please try again.");
     } finally {

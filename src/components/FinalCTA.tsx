@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { useWaitlist } from "@/components/WaitlistModal";
 
 export function FinalCTA() {
@@ -18,7 +19,7 @@ export function FinalCTA() {
               For people who are tired of saying &ldquo;I&apos;ll stop tomorrow.&rdquo;
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-cream-muted">
-              You already have the time. Join {count !== null ? `${count.toLocaleString()}` : "1,200+"} people who are ready to
+              You already have the time.{count !== null && <> Join <AnimatedCounter value={count} className="font-semibold" /> people who are</>} ready to
               stop saying &ldquo;tomorrow&rdquo; and start redirecting it.
             </p>
 
