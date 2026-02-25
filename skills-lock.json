@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "Data Privacy Compliance": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "computedHash": "5d417adba92a991ae3d156b3fa4f79c1480821084860e87368fe091e110562a6"
+    },
     "framer-motion-animator": {
       "source": "patricio0312rev/skills",
       "sourceType": "github",

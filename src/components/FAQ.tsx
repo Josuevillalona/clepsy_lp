@@ -9,34 +9,34 @@ import {
 
 const faqs = [
   {
-    question: "What is Clepsy?",
+    question: "Who is Clepsy?",
     answer:
-      "Clepsy is an iOS app that blocks social media apps until you earn screen time by using productive apps. Think of it as a time-trading system — invest in yourself first, then enjoy guilt-free scroll time.",
+      "Clepsy is an iOS app that blocks the apps you waste time on and only unlocks them after you spend time on apps that are actually good for you. The name comes from Clepsydra — an ancient Greek water clock. Time flows in, time flows out. Same idea, different century.",
   },
   {
-    question: "How does time-trading work?",
+    question: "Can I cheat it?",
     answer:
-      "You choose which apps to block (like TikTok, Instagram) and which apps count as productive (like Kindle, Duolingo). For every minute spent on productive apps, you earn a minute of social media time. The ratio is customizable.",
+      "No. Your iPhone enforces the blocks — not Clepsy. There's no snooze button, no \"just 5 more minutes.\" That's the whole point.",
   },
   {
-    question: "Which apps can I block?",
+    question: "Can I change my apps later?",
     answer:
-      "Any social media or entertainment app on your iPhone — TikTok, Instagram, Twitter/X, YouTube, Reddit, Snapchat, and more. You choose what goes on your block list.",
+      "Yes. You can update which apps are blocked and which ones count as productive anytime.",
   },
   {
-    question: "Which productive apps count?",
+    question: "What about Android?",
     answer:
-      "Reading apps (Kindle, Apple Books), language learning (Duolingo), meditation (Headspace, Calm), fitness apps, educational platforms, and more. You can customize your productive app list.",
+      "Clepsy is launching on iOS first. Android is on the way — join the waitlist and we'll keep you posted.",
   },
   {
-    question: "When is Clepsy launching?",
+    question: "What about my data?",
     answer:
-      "We're targeting a 2026 launch on iOS. Join the waitlist to be the first to know and get early access.",
+      "Clepsy never sees your raw screen time data — your iPhone keeps that private. Your usage data is encrypted on your device, and we don't sell your habits.",
   },
   {
-    question: "Is my data private?",
+    question: "When is it launching?",
     answer:
-      "Absolutely. All your usage data stays on your device. We don't track your browsing, sell your data, or store anything in the cloud. Your habits are your business.",
+      "We're targeting 2026 on iOS. Join the waitlist for free early access.",
   },
 ];
 

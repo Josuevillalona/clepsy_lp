@@ -84,7 +84,7 @@ export function Hero() {
               className="mt-4 text-sm text-cream-muted/70 animate-fade-up opacity-0"
               style={{ animationDelay: "0.9s" }}
             >
-              Because we couldn&apos;t stop scrolling either.
+              You don&apos;t need less screen time. You need better screen time.
             </p>
           </div>
 

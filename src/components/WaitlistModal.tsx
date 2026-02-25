@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useWaitlistCount } from "@/hooks/useWaitlistCount";
@@ -12,7 +13,7 @@ interface WaitlistContextValue {
 }
 
 const WaitlistContext = createContext<WaitlistContextValue>({
-  open: () => {},
+  open: () => { },
   count: null,
 });
 
@@ -113,6 +114,13 @@ export function WaitlistProvider({ children }: { children: React.ReactNode }) {
                 >
                   {submitting ? "Joining..." : "Join Waitlist"}
                 </Button>
+                <p className="text-center text-[11px] text-cream-muted/60 mt-2">
+                  By joining, you agree to our{" "}
+                  <Link href="/privacy" className="underline hover:text-gold transition-colors">
+                    Privacy Policy
+                  </Link>
+                  .
+                </p>
               </form>
             ) : (
               <div className="mt-6 rounded-2xl border border-teal/30 bg-teal/10 p-5 text-center">

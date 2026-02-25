@@ -1,76 +1,68 @@
+import { ShieldCheck, Activity, RotateCcw, SlidersHorizontal } from "lucide-react";
+
 const features = [
   {
-    title: "Can't Be Cheated",
+    title: "The Answer Is Always No",
     description:
-      "Powered by the same API iOS uses. No \"Ignore for today\" button. No workaround. That's the whole point.",
-    icon: "🔒",
+      "Try to open a blocked app and Clepsy steps in — reminding you why you blocked it and nudging you toward something better.",
+    icon: ShieldCheck,
+    large: true,
   },
   {
-    title: "Tracks Automatically",
+    title: "Tracks Without You Thinking",
     description:
-      "Open Kindle at lunch, close it 15 minutes later. 15 minutes of TikTok just appeared in your balance. No buttons, no manual timers.",
-    icon: "🧠",
+      "Use an app, close it. The time counts. No start buttons, no manual tracking.",
+    icon: Activity,
+    large: false,
   },
   {
-    title: "Clean Slate Every Morning",
+    title: "Fresh Start Every Day",
     description:
-      "At midnight, your balance resets to zero. Every morning is a fresh start. What will you build today?",
-    icon: "🌅",
+      "Your balance resets at midnight. No rollover, no debt. Just a new day.",
+    icon: RotateCcw,
+    large: false,
   },
   {
-    title: "Streaks That Mean Something",
+    title: "Your Rules, Your Apps",
     description:
-      "Your Kindle streak is longer than most people's gym streak. Clepsy throws confetti — you earned it.",
-    icon: "🏆",
-  },
-  {
-    title: "A Buddy, Not a Cop",
-    description:
-      "Clepsy waits patiently, cheers you on, and celebrates your wins. No shame, no lectures — just someone in your corner.",
-    icon: "🤝",
-  },
-  {
-    title: "Your Data Stays Yours",
-    description:
-      "Everything lives on your device. No cloud tracking, no selling your habits. Your hours are your business.",
-    icon: "🛡️",
+      "Pick which apps to block, which ones count as productive, and how much time you need. Set goals that match your life, not someone else's idea of productivity.",
+    icon: SlidersHorizontal,
+    large: true,
   },
 ];
 
 export function Features() {
   return (
-    <section id="features" className="relative py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="features" className="relative py-24 overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-gold/5 blur-[150px] pointer-events-none" />
+
+      <div className="relative mx-auto max-w-6xl px-6">
         <div className="text-center reveal">
           <p className="text-sm font-semibold uppercase tracking-widest text-gold">
             Features
           </p>
           <h2 className="mt-4 font-display text-4xl font-bold text-cream md:text-5xl">
-            20 min of reading. 20 min of Instagram.
+            Built for people with zero willpower<br />and <span className="text-gold">big plans.</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-cream-muted">
-            Not another screen time reminder you&apos;ll ignore. A system you
-            can&apos;t cheat — and won&apos;t want to.
-          </p>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Horizontal row */}
+        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
             <div
               key={feature.title}
-              className={`reveal reveal-delay-${(i % 3) + 1} group relative overflow-hidden rounded-2xl border border-gold/10 bg-surface/30 p-7 transition-all hover:border-gold/30 hover:bg-surface/60`}
+              className={`reveal reveal-delay-${(i % 4) + 1} group relative overflow-hidden rounded-2xl border border-gold/10 bg-white/[0.03] backdrop-blur-sm p-8 transition-all duration-300 hover:border-gold/25 hover:bg-white/[0.06] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(244,162,89,0.08)]`}
             >
-              {/* Gradient border effect on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-              <div className="relative">
-                <div className="mb-4 text-3xl">{feature.icon}</div>
-                <h3 className="font-display text-lg font-bold text-cream">
-                  {feature.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-cream-muted">
-                  {feature.description}
-                </p>
+              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl border border-gold/20 bg-gold/10 transition-colors duration-300 group-hover:bg-gold/20 group-hover:border-gold/30">
+                <feature.icon className="h-5 w-5 text-gold" />
               </div>
+              <h3 className="mt-4 font-display text-xl font-bold text-cream text-center">
+                {feature.title}
+              </h3>
+              <p className="mt-2 leading-relaxed text-cream-muted text-center blur-[6px] transition-[filter] duration-300 group-hover:blur-none">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
