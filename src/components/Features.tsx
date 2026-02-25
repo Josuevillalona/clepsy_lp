@@ -38,7 +38,7 @@ export function Features() {
   const [activeFeature, setActiveFeature] = useState<number | null>(null);
 
   return (
-    <section id="features" className="relative py-24">
+    <section id="features" className="relative overflow-hidden py-24">
       {/* Background glow */}
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] md:w-[800px] md:h-[800px] rounded-full bg-gold/[0.04] blur-[150px] md:blur-[250px] pointer-events-none" />
 
