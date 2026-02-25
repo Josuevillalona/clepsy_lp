@@ -12,26 +12,26 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center overflow-hidden pt-20"
+      className="relative flex min-h-[100dvh] items-center overflow-hidden pt-24 pb-12 md:py-20"
     >
       {/* Background glow */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-gold/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] rounded-full bg-gold/[0.04] blur-[150px] md:blur-[250px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-6xl w-full px-6">
-        <div className="grid items-center gap-8 md:grid-cols-2">
+        <div className="grid items-center gap-12 md:gap-8 md:grid-cols-2">
 
           {/* Left: Phone mockup */}
-          <div className="flex md:flex items-end justify-center relative animate-fade-in">
+          <div className="flex order-last md:order-first items-end justify-center relative animate-fade-in px-4">
             <Image
               src="/onboarding_mock1.png"
               alt="Clepsy onboarding screen"
               width={400}
               height={800}
               priority
-              className="max-h-[80vh] w-auto object-contain"
+              className="max-h-[75vh] md:max-h-[80vh] w-auto object-contain"
               style={{
-                maskImage: "linear-gradient(to bottom, black 30%, transparent 85%)",
-                WebkitMaskImage: "linear-gradient(to bottom, black 30%, transparent 85%)",
+                maskImage: "linear-gradient(to bottom, black 50%, transparent 95%)",
+                WebkitMaskImage: "linear-gradient(to bottom, black 50%, transparent 95%)",
               }}
             />
           </div>

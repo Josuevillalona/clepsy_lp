@@ -53,12 +53,12 @@ export function FAQ() {
           </h2>
         </div>
 
-        <Accordion type="single" collapsible className="mt-12 space-y-3 reveal reveal-delay-1">
+        <Accordion type="single" collapsible className="mt-12 space-y-3 reveal reveal-delay-1 relative z-10">
           {faqs.map((faq, i) => (
             <AccordionItem
               key={i}
               value={`item-${i}`}
-              className="rounded-xl border border-gold/10 bg-surface/30 px-6 data-[state=open]:border-gold/30"
+              className="relative rounded-xl border border-gold/10 bg-surface/10 px-6 data-[state=open]:border-gold/30 backdrop-blur-sm"
             >
               <AccordionTrigger className="font-display text-left font-semibold text-cream hover:text-gold hover:no-underline">
                 {faq.question}

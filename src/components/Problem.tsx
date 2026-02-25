@@ -108,7 +108,7 @@ export function Problem() {
           {/* Subtitle + calculator prompt */}
           <div
             style={{ opacity: allHighlighted ? 1 : 0, transition: "opacity 0.5s ease" }}
-            className="w-full"
+            className="w-full px-4 md:px-0"
           >
             <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-cream-muted">
               Check your Screen Time right now. How many hours a day do you spend on social media?
@@ -120,11 +120,10 @@ export function Problem() {
                 <button
                   key={preset.value}
                   onClick={() => setSelected(preset.value)}
-                  className={`rounded-full px-6 py-3 text-lg font-semibold transition-all duration-150 border ${
-                    selected === preset.value
-                      ? "bg-gold text-midnight border-gold shadow-[0_0_24px_rgba(244,162,89,0.3)]"
-                      : "bg-surface/30 text-cream border-gold/10 hover:border-gold/30 hover:bg-surface/60"
-                  }`}
+                  className={`rounded-full px-6 py-3 text-lg font-semibold transition-all duration-150 border ${selected === preset.value
+                    ? "bg-gold text-midnight border-gold shadow-[0_0_24px_rgba(244,162,89,0.3)]"
+                    : "bg-surface/30 text-cream border-gold/10 hover:border-gold/30 hover:bg-surface/60"
+                    }`}
                 >
                   {preset.label}
                 </button>
@@ -155,7 +154,7 @@ export function Problem() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 0.6 }}
-                    className="mx-auto mt-8 max-w-2xl text-lg text-cream"
+                    className="mx-auto mt-8 max-w-2xl px-4 md:px-0 text-lg text-cream"
                   >
                     {getWhatIfLine(selected)}
                   </motion.p>

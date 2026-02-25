@@ -33,9 +33,9 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="relative py-24 overflow-hidden">
+    <section id="features" className="relative py-24">
       {/* Background glow */}
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-gold/5 blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] md:w-[800px] md:h-[800px] rounded-full bg-gold/[0.04] blur-[150px] md:blur-[250px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="text-center reveal">
@@ -54,13 +54,13 @@ export function Features() {
               key={feature.title}
               className={`reveal reveal-delay-${(i % 4) + 1} group relative overflow-hidden rounded-2xl border border-gold/10 bg-white/[0.03] backdrop-blur-sm p-8 transition-all duration-300 hover:border-gold/25 hover:bg-white/[0.06] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(244,162,89,0.08)]`}
             >
-              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl border border-gold/20 bg-gold/10 transition-colors duration-300 group-hover:bg-gold/20 group-hover:border-gold/30">
+              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl border border-gold/20 bg-gold/10 transition-colors duration-300 group-hover:bg-gold/20 group-hover:border-gold/30 group-active:bg-gold/20 group-active:border-gold/30">
                 <feature.icon className="h-5 w-5 text-gold" />
               </div>
               <h3 className="mt-4 font-display text-xl font-bold text-cream text-center">
                 {feature.title}
               </h3>
-              <p className="mt-2 leading-relaxed text-cream-muted text-center blur-[6px] transition-[filter] duration-300 group-hover:blur-none">
+              <p className="mt-2 leading-relaxed text-cream-muted text-center blur-[6px] transition-[filter] duration-300 group-hover:blur-none group-active:blur-none lg:active:blur-[6px] md:focus:blur-none">
                 {feature.description}
               </p>
             </div>

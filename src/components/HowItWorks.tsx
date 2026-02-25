@@ -27,20 +27,20 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-24 overflow-hidden">
+    <section id="how-it-works" className="relative py-24">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/5 blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] rounded-full bg-gold/[0.04] blur-[150px] md:blur-[250px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid items-start gap-12 md:grid-cols-2 lg:gap-20">
 
           {/* Left: Content */}
-          <div>
+          <div className="px-4 md:px-0">
             <div className="reveal">
-              <p className="text-sm font-semibold uppercase tracking-widest text-gold">
+              <p className="text-sm font-semibold uppercase tracking-widest text-gold text-center md:text-left">
                 How It Works
               </p>
-              <h2 className="mt-4 font-display text-4xl font-bold md:text-5xl">
+              <h2 className="mt-4 text-center md:text-left font-display text-4xl font-bold md:text-5xl">
                 <span className="text-cream">Block.</span> <span className="text-cream">Redirect.</span> <span className="text-gold">Repeat.</span>
               </h2>
             </div>
