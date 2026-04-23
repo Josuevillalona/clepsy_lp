@@ -37,11 +37,11 @@ export function Hero() {
           {/* Right: Content */}
           <div className="flex flex-col items-start">
             <h1
-              className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-cream sm:text-5xl md:text-6xl animate-fade-up"
+              className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-cream sm:text-5xl md:text-7xl animate-fade-up"
               style={{ animationDelay: "0.1s" }}
             >
-              You don&apos;t need less screen time. You need{" "}
-              <span className="text-gold">better</span> screen time.
+              Take back<br />your{" "}
+              <span className="text-gold">time.</span>
             </h1>
 
             <p
@@ -64,6 +64,13 @@ export function Hero() {
                 Join Waitlist
               </Button>
             </div>
+
+            <p
+              className="mt-4 text-sm text-cream-muted/70 animate-fade-up opacity-0"
+              style={{ animationDelay: "0.9s" }}
+            >
+              You don&apos;t need less screen time. You need better screen time.
+            </p>
 
           </div>
 
