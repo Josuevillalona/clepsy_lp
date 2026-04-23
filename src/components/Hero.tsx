@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { useWaitlist } from "@/components/WaitlistModal";
 
 export function Hero() {
-  const { open, count } = useWaitlist();
+  const { open } = useWaitlist();
 
   return (
     <section
@@ -66,19 +64,6 @@ export function Hero() {
                 Join Waitlist
               </Button>
             </div>
-
-            {/* Social proof */}
-            {count !== null && (
-              <div
-                className="mt-8 flex items-center gap-3 animate-fade-up opacity-0"
-                style={{ animationDelay: "0.7s" }}
-              >
-                <Users className="h-5 w-5 text-gold" />
-                <p className="text-sm text-cream-muted">
-                  <AnimatedCounter value={count} className="font-semibold text-cream" /> people on the waitlist
-                </p>
-              </div>
-            )}
 
             <p
               className="mt-4 text-sm text-cream-muted/70 animate-fade-up opacity-0"

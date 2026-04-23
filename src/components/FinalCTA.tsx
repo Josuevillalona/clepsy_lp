@@ -1,11 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { useWaitlist } from "@/components/WaitlistModal";
 
 export function FinalCTA() {
-  const { open, count } = useWaitlist();
+  const { open } = useWaitlist();
 
   return (
     <section className="relative py-24">
@@ -29,11 +28,6 @@ export function FinalCTA() {
               Join Waitlist
             </Button>
 
-            {count !== null && (
-              <p className="mt-6 text-sm text-cream-muted">
-                <AnimatedCounter value={count} className="font-semibold text-cream" /> people already did.
-              </p>
-            )}
           </div>
         </div>
       </div>
